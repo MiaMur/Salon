@@ -1,0 +1,58 @@
+@media screen and (max-width: 1365px) {
+  .feet,
+  #left-foot,
+  #right-foot {
+    text-align: center;
+  }
+  .feet {
+    width: 700px;
+    height: auto;
+    padding-top: 40px;
+  }
+  .foot-brand {
+    width: 200px;
+  }
+  .telly {
+    float: none;
+  }
+  #right-foot {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+    transition: 1s;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  .links a:hover {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .feet {
+    width: 100%;
+  }
+}
