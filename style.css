@@ -75,6 +75,20 @@ body {
   color: white;
   padding: 50px;
 }
+
+article {
+  height: 100vh auto;
+}
+.tag {
+  opacity: 0;
+  transform: translate(0, 5vh);
+  transition: all 2s;
+}
+.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 .hero-logo {
   margin: auto;
   padding: 10px;
@@ -116,39 +130,19 @@ li {
   visibility: hidden;
 }
 
-.topnav {
-  position: fixed;
-  background-color: #0a0f0f;
-  width: 100%;
-  font-family: Niconne;
-  font-size: 25px;
-  z-index: 2;
-  overflow: hidden;
+.hero {
+  margin-top: 200px;
+  position: relative;
 
-  /* width of entire menu bar*/
-}
-.topnav a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  padding: 14px 16px;
-}
-
-.topnav a:hover {
-  background: #555;
-  color: lightgrey;
-  transition: 1s;
-}
-.hero,
-.hero-logo {
-  visibility: hidden;
-
-  margin: 0;
+  display: inline-block;
+  text-align: center;
+  visibility: visible;
+  padding: 30px auto auto 50px;
 }
 .logo {
   border: 3px solid black;
-  padding: 12px;
-  font-size: 30px;
+  padding: 15px 12px 15px 12px;
+  font-size: 40px;
   display: inline-block;
   color: black;
   background-color: rgb(244, 243, 253, 0.9);
@@ -340,6 +334,10 @@ hr {
   width: 100%;
   height: auto;
   /*margin-bottom:0;*/
+}
+.footer-logo {
+  padding: 12px;
+  font-size: 30px;
 }
 .footer,
 .feet {
