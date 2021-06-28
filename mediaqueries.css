@@ -25,6 +25,9 @@
   /*body{
     background:none;
   }*/
+  .nav-toggle:hover {
+    transform: rotate(90deg);
+  }
   .sections {
     position: relative;
     width: 100vw;
@@ -93,8 +96,16 @@
     margin: 0;
     scroll-behavior: unset;
   }
+  .links {
+    height: 0;
+    overflow: hidden;
+    transition: 1000ms;
+  }
   .links a {
     text-align: center;
+  }
+  .show-links {
+    height: 15rem;
   }
 }
 @media screen and (min-width: 800px) {
@@ -112,10 +123,13 @@
   .nav-toggle {
     display: none;
   }
+
+  .show-links {
+    height: 10rem;
+  }
   .links {
     height: auto;
     display: flex;
-    transition: 1s;
   }
   .links a {
     padding: 0;
