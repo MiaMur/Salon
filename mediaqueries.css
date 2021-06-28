@@ -24,10 +24,12 @@
 @media screen and (max-width: 800px) {
   /*body{
     background:none;
-  }*/
+  }
   .nav-toggle:hover {
     transform: rotate(90deg);
   }
+  */
+  
   .sections {
     position: relative;
     width: 100vw;
