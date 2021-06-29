@@ -512,9 +512,7 @@ a {
   border: 1px white solid;
   border-radius: 5px;
 }
-::-webkit-scrollbar {
-  display: none;
-}
+
 /* Add Animation */
 .modal-content {
   animation-name: zoom;
