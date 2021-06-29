@@ -16,8 +16,11 @@
 #brand {
   scroll-margin-top: -100px;
 }
+#img-a {
+  scroll-margin-top: -500px;
+}
 #book {
-  margin-bottom: 200px;
+  margin-bottom: 500px;
 }
 
 body {
@@ -212,7 +215,7 @@ hr {
 }
 .left-bio {
   display: flex;
-  width: 90vw;
+  width: 100vw;
 }
 .bio-left-section {
   background-color: rgba(0, 0, 0, 0.7);
@@ -234,6 +237,9 @@ hr {
   width: 100%;
   text-align: center;
 }
+.img-gallery {
+  overflow: hidden;
+}
 .img-gallery-item {
   width: 10em;
   height: 12em;
@@ -241,6 +247,7 @@ hr {
 
   text-align: center;
 }
+
 /*.stylist-names-menu,
 .img-gallery-stylist1 {
   display: inline-block;
@@ -306,6 +313,7 @@ hr {
   width: 250px;
   height: 300px;
 }
+
 /*#portrait:before,
 #portrait:after {
   position: absolute;
@@ -448,3 +456,107 @@ a {
 .foot-nav a:hover {
   color: #e9e7e7;
 }
+.myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.5s;
+}
+#img01 {
+  opacity: 1;
+}
+
+.myImg:hover {
+  opacity: 0.7;
+}
+.modal-imgs {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+.modal-imgs img {
+  width: 100px;
+  height: 150px;
+  border: 1px white solid;
+  display: inline-flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed; /* Stay in place */
+  /* Sit on top */
+  z-index: 1;
+  left: 0;
+  width: 100vw; /* Full width */
+  height: auto; /* Full height */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  padding: 10px;
+
+  padding-top: 150px;
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 300px;
+  height: 400px;
+  padding: 17px;
+  transform: translate(0, 0);
+  transition: ease-in;
+  border: 1px white solid;
+  border-radius: 5px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* Add Animation */
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  float: right;
+  margin-right: 20px;
+  display: block;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
