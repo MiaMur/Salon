@@ -16,9 +16,9 @@
 #brand {
   scroll-margin-top: -100px;
 }
-#img-a {
-  scroll-margin-top: -500px;
-}
+/*#img-a {
+  scroll-margin-top: 100px;
+}*/
 #book {
   margin-bottom: 500px;
 }
@@ -101,7 +101,6 @@ li {
 }
 .links a {
   font-family: "Niconne";
-
   text-decoration: none;
   font-size: 25px;
   display: block;
@@ -215,13 +214,31 @@ hr {
 }
 .left-bio {
   display: flex;
-  width: 100vw;
+  padding: 0;
+  margin: 0;
+  width: 90vw;
+
+  border: 1px solid yellow;
+  /*width: 90vw;*/
 }
 .bio-left-section {
   background-color: rgba(0, 0, 0, 0.7);
   margin: auto;
+  padding: 5px;
   border-radius: 1px;
   width: 100%;
+  border: 1px solid red;
+}
+#portrait {
+  width: 100%;
+  height: auto;
+  /*overflow: hidden;*/
+  position: relative;
+  margin: 2px;
+  align-items: center;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid blue;
 }
 
 /*#portrait,
@@ -286,6 +303,7 @@ hr {
 #bio {
   padding-top: 100px;
 }
+
 .stylist-header {
   text-align: center;
   border: 2px solid rgb(121, 2, 2);
@@ -298,16 +316,6 @@ hr {
   width: 250px;
   color: rgb(255, 0, 0);
   margin: auto;
-}
-
-#portrait {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  position: relative;
-  margin: 2px;
-  display: inline-block;
-  text-align: center;
 }
 .pic {
   width: 250px;
@@ -459,7 +467,7 @@ a {
 .myImg {
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  /*transition: 0.3s;*/
   opacity: 0.5s;
 }
 #img01 {
@@ -469,10 +477,29 @@ a {
 .myImg:hover {
   opacity: 0.7;
 }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: absolute; /* Stay in place */
+  /* Sit on top */
+  z-index: 1;
+  left: 0;
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+
+  padding-top: 100px;
+  padding-bottom: 50px;
+  /*border: 1px solid blue;*/
+}
+
 .modal-imgs {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  /*margin-top: 50px;
+  margin-bottom: 50px;*/
   background-color: rgb(0, 0, 0, 0.6);
+  /*border: 1px solid yellow;*/
 }
 
 .modal-imgs img {
@@ -481,25 +508,8 @@ a {
   border: 1px white solid;
   display: inline-flex;
   justify-content: space-between;
-  margin: 20px;
+  margin: 10px;
 }
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed; /* Stay in place */
-  /* Sit on top */
-  z-index: 1;
-  left: 0;
-  width: 100vw; /* Full width */
-  height: auto; /* Full height */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
-  padding: 10px;
-
-  padding-top: 150px;
-}
-
 /* Modal Content (image) */
 .modal-content {
   margin: auto;
@@ -539,15 +549,17 @@ a {
 
 /* The Close Button */
 .close {
-  top: 15px;
+  top: 0;
   right: 35px;
   color: #f1f1f1;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
   transition: 0.3s;
-  float: right;
+
   margin-right: 20px;
-  display: block;
+  display: inline-block;
+
+  /*border: 1px solid red;*/
 }
 
 .close:hover,
