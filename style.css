@@ -111,7 +111,7 @@ li {
 }
 
 .links a:hover {
-  background: var(--clr-primary-8);
+  
   color: grey;
   transition: 0.5s;
 }
@@ -217,9 +217,6 @@ hr {
   padding: 0;
   margin: 0;
   width: 90vw;
-
-  border: 1px solid yellow;
-  /*width: 90vw;*/
 }
 .bio-left-section {
   background-color: rgba(0, 0, 0, 0.7);
@@ -227,7 +224,6 @@ hr {
   padding: 5px;
   border-radius: 1px;
   width: 100%;
-  border: 1px solid red;
 }
 #portrait {
   width: 100%;
@@ -238,7 +234,6 @@ hr {
   align-items: center;
   display: inline-block;
   text-align: center;
-  border: 1px solid blue;
 }
 
 /*#portrait,
