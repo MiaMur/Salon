@@ -111,7 +111,7 @@ li {
 }
 
 .links a:hover {
-  
+  background: var(--clr-primary-8);
   color: grey;
   transition: 0.5s;
 }
