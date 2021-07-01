@@ -28,7 +28,7 @@
     scroll-margin-top: 250px;
   }*/
   #img-a {
-    scroll-padding-top: 50px;
+    scroll-padding-top: 0;
     transition: 0.6s;
   }
 
