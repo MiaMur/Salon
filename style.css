@@ -221,6 +221,7 @@ hr {
 .bio-left-section {
   background-color: rgba(0, 0, 0, 0.7);
   margin: auto;
+  display: inline-block;
   padding: 5px;
   border-radius: 1px;
   width: 100%;
@@ -477,14 +478,13 @@ a {
 .modal {
   display: none;
   /* Hidden by default */
-  position: absolute; /* Stay in place */
+  position: fixed; /* Stay in place */
   /* Sit on top */
   z-index: 1;
   left: 0;
   width: 100%; /* Full width */
   height: auto; /* Full height */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
-
   padding-top: 100px;
   padding-bottom: 50px;
   /*border: 1px solid blue;*/
@@ -505,6 +505,11 @@ a {
   justify-content: space-between;
   margin: 10px;
 }
+.img-gallery-item {
+  animation: zoom;
+  animation-duration: 0.6s;
+}
+
 /* Modal Content (image) */
 .modal-content {
   margin: auto;
@@ -512,8 +517,8 @@ a {
   width: 300px;
   height: 400px;
   padding: 17px;
-  transform: translate(0, 0);
-  transition: ease-in;
+  /*transform: translate(0, 0);
+  transition: ease-in;*/
   border: 1px white solid;
   border-radius: 5px;
 }
