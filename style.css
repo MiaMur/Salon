@@ -16,9 +16,7 @@
 #brand {
   scroll-margin-top: -100px;
 }
-/*#img-a {
-  scroll-margin-top: 100px;
-}*/
+
 #book {
   margin-bottom: 500px;
 }
@@ -59,7 +57,9 @@ body {
 .nav-toggle:hover {
   color: grey;
 }
-
+.hide {
+  display: none;
+}
 .logo {
   border: 3px solid black;
   padding: 12px;
@@ -517,6 +517,7 @@ a {
   width: 300px;
   height: 400px;
   padding: 17px;
+  margin-bottom: 100px;
   /*transform: translate(0, 0);
   transition: ease-in;*/
   border: 1px white solid;
@@ -549,15 +550,14 @@ a {
 
 /* The Close Button */
 .close {
-  top: 0;
-  right: 35px;
   color: #f1f1f1;
   font-size: 50px;
   font-weight: bold;
   transition: 0.3s;
-
-  margin-right: 20px;
   display: inline-block;
+  margin: 5px;
+  left: 10px;
+  position: relative;
 
   /*border: 1px solid red;*/
 }

@@ -51,9 +51,7 @@
     justify-content: space-between;
     margin: 5px;
   }
-  .close {
-    margin: 0;
-  }
+
   .sections {
     position: relative;
     width: 100vw;

@@ -1,16 +1,8 @@
-// classList - shows/gets all classes
-// contains - checks classList for specific class
-// add - add class
-// remove - remove class
-// toggle - toggles class
-
 const navToggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".links");
 
 navToggle.addEventListener("click", function () {
-  // console.log(links.classList);
-  // console.log(links.classList.contains("random"));
-  // console.log(links.classList.contains("links"));
+
   // if (links.classList.contains("show-links")) {
   //   links.classList.remove("show-links");
   // } else {
@@ -19,8 +11,6 @@ navToggle.addEventListener("click", function () {
   links.classList.toggle("show-links");
 });
 
-
-var modal = document.getElementById("myModal");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 
@@ -45,11 +35,12 @@ var modal = document.getElementById('my-modal');
 var images = document.getElementsByClassName('img-gallery-item');
 // the image in the modal
 var modalImg = document.getElementById("img01");
+const span = document.querySelector(".close")
 
 
 
 // Go through all of the images with our custom class
-for (var i = 0; i < images.length; i++) {
+/*for (var i = 0; i < images.length; i++) {
  
   var img = images[i];
   // and attach our click listener for this image.
@@ -58,14 +49,56 @@ for (var i = 0; i < images.length; i++) {
     modalImg.src = this.src;
      
   }
-}
+}*/
 
-var span = document.getElementsByClassName("close")[0];
+
+/*for (var i = 0; i < images.length; i++) {
+ 
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+     
+  }
+}*/
+
+var img = images[i];
+
+for (var i = 0; i<images.length; i++)
+img.addEventListener("click", function(){
+  
+  modal.style.display = "block";
+  modalImg.src = this.src;
+});
+
+
+
+
+
+
+/*const images = document.querySelectorAll(".img-gallery-item");
+const modal = document.querySelector(".my-modal");
+const modalImg = document.getElementById("img01");
+const span = document.querySelector(".close");
+
+images.addEventListener("click", function(){
+  
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  
+});*/
+
+
+
+
+
+/*var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function() {
   modal.style.display = "none";
   
-}
+}*/
 
 
 /*
@@ -95,12 +128,12 @@ img4.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
-}
+}*/
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+//var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
+/* When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
   modal.style.display = "none";
 }*/
