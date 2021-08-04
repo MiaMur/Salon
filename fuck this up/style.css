@@ -1,0 +1,653 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+#promo,
+#book {
+  scroll-margin-top: -100px;
+}
+#bio {
+  scroll-margin-top: -200px;
+}
+#brand {
+  scroll-margin-top: -100px;
+}
+
+#book {
+  margin-bottom: 500px;
+}
+
+body {
+  background: url(images.salon/inside\ salon.jpg) top center / 90% 100% fixed;
+}
+
+#top-nav {
+  position: fixed;
+  z-index: 5;
+  width: 60%;
+  /* background: rgb(10, 15, 15);*/
+}
+.overlay {
+  position: fixed;
+  background:black;
+  top:0;
+  width: 100%;
+  height: 70px;
+  z-index: -5;
+  display:block;
+
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-toggle {
+  /*icon*/
+  color: white;
+  background: transparent;
+  border-color: transparent;
+  transition: 1s;
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: grey;
+}
+li {
+  list-style-type: none;
+}
+.links a {
+  font-family: "Niconne";
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 18px;
+}
+.links a:hover {
+  color: grey;
+  transition: 0.5s;
+}
+.links {
+
+  height: 0;
+  overflow: hidden;
+  background: black;
+  transition: .3s;
+}
+
+
+@-webkit-keyframes expand {
+  0% {
+    -webkit-left: 0%;
+  }
+  100% {
+    -webkit-left: 80%;
+  }
+}
+
+@keyframes expand {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 80%;
+  }
+}
+
+/*.hide {
+  display: none;
+  transition: 0.5;
+}*/
+.logo {
+  border: 3px solid black;
+  padding: 12px;
+  font-size: 3rem;
+  display: inline-block;
+  color: black;
+  background-color: rgb(244, 243, 253, 0.9);
+  font-family: "Niconne", cursive;
+}
+.sections {
+  margin-top: 400px;
+  display: inline-block;
+  width: 100vw;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 50px;
+}
+
+article {
+  height: 100vh auto;
+}
+.tag {
+  opacity: 0;
+  transform: translate(0, 5vh);
+  transition: all 2s;
+}
+.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.hero-logo {
+  margin: auto;
+  padding: 10px;
+}
+
+.social-icons {
+  display: none;
+  color: white;
+}
+.hero {
+  margin-top: 200px;
+  position: relative;
+
+  display: inline-block;
+  text-align: center;
+  visibility: visible;
+  padding: 30px auto auto 50px;
+}
+.logo {
+  border: 3px solid black;
+  padding: 15px 12px 15px 12px;
+  font-size: 40px;
+  display: inline-block;
+  color: black;
+  background-color: rgb(244, 243, 253, 0.9);
+}
+
+hr {
+  height: 3px;
+  background: black;
+  width: 200px;
+  margin: auto;
+}
+.header {
+  color: rgb(0, 255, 255, 0.8);
+  font-family: "Viaoda Libre", cursive;
+  text-align: center;
+  margin: 25px;
+  font-size: 30px;
+}
+.brand-image {
+  width: 45vw;
+  height: auto;
+  display: block;
+  margin: auto;
+  opacity: 0.6;
+  box-shadow: 0 5px 10px black;
+  margin-bottom: 20px;
+}
+.brand-blurb {
+  color: rgb(233, 231, 231);
+  word-spacing: 4px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px 30px 15px 30px;
+
+  margin: 30px;
+  margin: auto;
+}
+
+
+
+.bio-blurb {
+  width: 100%;
+  letter-spacing: 1px;
+  padding: 2rem 4rem 2rem 4rem;
+  text-align: left;
+  display: inline-block;
+  color: rgb(233, 231, 231);
+}
+.brand-blurb,
+.bio-blurb {
+  background-color: rgba(0, 0, 0, 0.8);
+  line-height: 30px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-family: "Viaoda Libre", cursive;
+  letter-spacing: 1px;
+}
+.brand-blurb::first-letter {
+  color: rgb(0, 255, 255, 0.9);
+  font-size: 30px;
+  font-family: "Viaoda Libre", cursive;
+}
+#bio-select {
+  color: red;
+  cursor: crosshair;
+}
+.back-to-stylists {
+  text-decoration: underline;
+}
+.promo,
+.book {
+  text-align: center;
+}
+.bio-header {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+.left-bio {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 90vw;
+}
+.bio-left-section {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: auto;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 1px;
+  width: 100%;
+}
+
+
+/*#portrait,
+.img-gallery-item,
+.bio-left-section {
+  float: left; /*remove in responsive
+}*/
+
+.img-gallery-stylist1 {
+  box-shadow: 0 5px 10px rgba(0, 0, 0.5);
+  border-radius: 2px;
+  width: 100%;
+  text-align: center;
+}
+.img-gallery {
+  overflow: hidden;
+  
+}
+.img-gallery-item {
+  width: 10em;
+  height: 12em;
+  padding: 2px;
+  text-align: center;
+}
+.stylist-directory {
+  display: inline-block;
+  width:90vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.stylist-names-menu a {
+  font-family: Niconne;
+  font-size: 1.5rem;
+  width: 300px;
+  padding: 10px;
+  margin:auto;
+  letter-spacing: 3px;
+  line-height: 2rem;
+  transition: ease-in-out 0.25s;
+  display: inline-block;
+}
+.stylist-names-menu{
+  
+  background-color: rgba(0, 0, 0, 0.8);
+  width:650px;
+  margin:auto;
+  
+  /*width:90vw;
+  margin:auto;*/
+  
+
+}
+.stylist-directory a {
+  list-style-type: none;
+  text-decoration: underline;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid rgb(241, 238, 238);
+}
+.stylist-directory a:hover {
+  color: #a7a7a7;
+}
+
+#bio {
+  padding-top: 100px;
+}
+#portrait {
+  width: 100%;
+  height: auto;
+  /*overflow: hidden;*/
+  position: relative;
+  margin: 2px;
+  align-items: center;
+  padding:20px;
+  display: inline-block;
+  text-align: center;
+}
+.stylist-header {
+  text-align: center;
+  border: 2px solid rgb(121, 2, 2);
+  border-bottom: none;
+  font-family: "Niconne", cursive;
+  letter-spacing: 3px;
+  padding: 5px;
+  font-size:30px;
+  /*box-shadow: 5px 10px 20px white;*/
+  width: 250px;
+  color: rgb(240, 6, 6);
+  margin: auto;
+  background:rgb(0, 0, 0);
+}
+.pic {
+  width: 250px;
+  height: 350px;
+  border:.5px solid rgb(0, 0, 0);
+}
+
+/*#portrait:before,
+#portrait:after {
+  position: absolute;
+  content: "";
+  bottom: 5px;
+  left: 5px;
+  width: 47%;
+  top: 90%;
+  max-width: 100px;
+  box-shadow: -1px 50px 31px -5px rgb(250, 250, 250);
+  transform: rotate(-10deg);
+}
+#portrait:after {
+  transform: rotate(10deg);
+  right: 5px;
+  left: auto;
+}*/
+
+/*.topnav .menu-icon {
+  display: none;
+}*/
+
+/*dont fuck with*/
+.footer {
+  background: rgb(10, 15, 15);
+  width: 100%;
+  height: auto;
+  /*margin-bottom:0;*/
+}
+.footer-logo {
+  padding: 12px;
+  font-size: 30px;
+}
+.footer,
+.feet {
+  text-align: center;
+  display: inline-block;
+}
+.feet {
+  width: 300px;
+  height: 300px;
+}
+#left-foot {
+  text-align: left;
+  height: auto;
+  /*display:inline-block;*/
+}
+#right-foot {
+  text-align: right;
+} /*#0a0f0f*/
+.foot-brand {
+  width: 125px;
+}
+.address {
+  color: white;
+  line-height: 30px;
+  font-weight: 100;
+  font-size: 17px;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.number {
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+.number,
+a {
+  color: aqua;
+  text-decoration: none;
+  line-height: 30px;
+}
+.number:hover {
+  color: orange;
+}
+
+.telly,
+.icons {
+  width: 30px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid rgb(0, 255, 255);
+  color: rgb(0, 255, 255);
+}
+.telly {
+  float: left;
+}
+.telly:hover,
+.icons:hover {
+  color: rgb(233, 231, 231);
+  border: solid 2px rgb(233, 231, 231);
+}
+.number:hover {
+  color: rgb(233, 231, 231);
+}
+.social {
+  margin-top: 20px;
+}
+#left-foot,
+.social {
+  margin-top: 20px;
+}
+.extra {
+  width: 100px;
+  padding: 10px;
+  height: 150px;
+  display: inline-block;
+  border: 2px double silver;
+  margin-left: 10px;
+}
+
+.telly:hover,
+.icons:hover {
+  border: 2px solid silver;
+}
+.foot-nav-head {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 5px;
+  padding-bottom: 50px;
+}
+.social-top {
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+.foot-nav {
+  list-style-type: none;
+  line-height: 40px;
+  letter-spacing: 5px;
+  font-size: 17px;
+}
+.telly,
+.icons,
+.footer,
+.feet {
+  text-align: center;
+}
+.foot-nav a:hover {
+  color: #e9e7e7;
+}
+.myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  /*transition: 0.3s;*/
+  opacity: 0.5s;
+}
+#img01 {
+  opacity: 1;
+}
+
+.myImg:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed; /* Stay in place */
+  /* Sit on top */
+  z-index: 1;
+  left: 0;
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  padding-top: 100px;
+  padding-bottom: 50px;
+  /*border: 1px solid blue;*/
+}
+
+.modal-imgs {
+  /*margin-top: 50px;*/
+  
+  background-color: rgb(0, 0, 0, 0.6);
+  /*border: 1px solid yellow;*/
+}
+
+.modal-imgs img {
+  width: 100px;
+  height: 150px;
+  
+  border: 1px white solid;
+  display: inline-flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.modal-imgs {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 300px;
+  
+  height: 400px;
+  padding: 17px;
+  margin-bottom: 100px;
+  transform: translate(0, 0);
+  transition: 1s ease-in;
+  border: 1px white solid;
+  border-radius: 5px;
+}
+
+/* Add Animation */
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.5s;
+}
+
+@keyframes grow {
+  0% {
+    font-size: 20px;
+    opacity: 0.3;
+  }
+  100% {
+    font-size: 30px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes grow {
+  0% {
+    font-size: 25px;
+    opacity: 0.3;
+  }
+  100% {
+    font-size: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes expand {
+  0% {
+    left: 0;
+    top: 0;
+    height: 0;
+  }
+  100% {
+    left: 100%;
+    top: 100%;
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes expand {
+  0% {
+    -webkit-left: 0;
+
+    -webkit-height: 0;
+  }
+  100% {
+    -webkit-left: 100%;
+
+    -webkit-height: 100%;
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #f1f1f1;
+  font-size: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block;
+  margin: 5px;
+  left: 10px;
+  position: relative;
+
+  /*border: 1px solid red;*/
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
